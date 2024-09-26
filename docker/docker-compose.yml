@@ -33,4 +33,9 @@ services:
             - '${PORT}:${PORT}'
         volumes:
             - ~/.flowise:/root/.flowise
+            - ~/.flowise:/root/.flowise/api
+            - ~/.flowise:/root/.flowise/storage
+            - ~/.flowise:/root/.flowise/secret
+            - ~/.flowise:/root/.flowise/db
+            - ~/.flowise:/root/.flowise/logs
         entrypoint: /bin/sh -c "sleep 3; flowise start"
